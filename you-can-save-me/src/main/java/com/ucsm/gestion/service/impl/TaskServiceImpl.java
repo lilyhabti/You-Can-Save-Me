@@ -2,11 +2,14 @@ package com.ucsm.gestion.service.impl;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.ucsm.gestion.entities.Task;
 import com.ucsm.gestion.exception.ResourceNotFoundException;
 import com.ucsm.gestion.repositories.TaskRepository;
 import com.ucsm.gestion.service.TaskService;
 
+@Service
 public class TaskServiceImpl implements TaskService {
 	
 	private TaskRepository taskRepository;

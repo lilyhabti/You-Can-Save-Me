@@ -1,7 +1,8 @@
 package com.ucsm.gestion.entities;
 
-import java.sql.Date;
+
 import java.util.Collection;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -28,6 +29,7 @@ public class Visiteur extends AppUser {
 	private Date date_naissance;
 	private String genre;
 	private String centre_interet;
+	
 	public Visiteur(Long id_user, String nom, String prenom, String username, String password, String email,
 			String telephone, Collection<AppRole> appRoles, Date date_naissance, String genre, String centre_interet) {
 		super(id_user, nom, prenom, username, password, email, telephone, appRoles);
