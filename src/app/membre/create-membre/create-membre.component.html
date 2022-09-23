@@ -1,0 +1,46 @@
+<div class="center">
+    <form (ngSubmit) = "onSubmit()">
+        <h2>Add Membre</h2>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "membre.prenom" name="prenom" id="prenom" required>
+             <label>First Name:</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "membre.nom" name="nom" id="nom" required>
+             <label>Last Name:</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "membre.username" name="username" id="username" required>
+             <label>Username:</label>
+        </div>
+        <div class="txt_field">
+            <input type="password" [(ngModel)] = "membre.password" name="password" id="password" required>
+             <label>Password:</label>
+        </div>
+        <div class="txt_field">
+            <input type="email" [(ngModel)] = "membre.email" name="email" id="email" required>
+             <label>Email:</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "membre.telephone" name="telephone" id="telephone" required>
+             <label>Phone:</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "membre.active" name="active" id="active" required>
+             <label>Is Active?</label>
+        </div>
+        <div class="txt_field">
+            <input type="date" [(ngModel)] = "membre.date_entre" name="date_entre" id="date_entre" required>
+             <label>Start Date:</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "membre.profession" name="profession" id="profession" required>
+             <label>Profession:</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "membre.age" name="age" id="age" required>
+             <label>Age:</label>
+        </div>
+        <input type="submit" value="Save">
+    </form>
+</div>

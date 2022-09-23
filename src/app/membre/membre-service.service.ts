@@ -17,6 +17,11 @@ export class MembreServiceService {
   getMembresList(): Observable<Membre[]>{
     return this.httpClient.get<Membre[]>(`${this.baseURL}`);
   }
+
+  createMembre(membre:Membre):Observable<Object>{
+    return this.httpClient.post(`${this.baseURL}`,membre);
+  }
+
   getMembreById(id_user: number): Observable<Membre>{
     return this.httpClient.get<Membre>(`${this.baseURL}/${id_user}`);
   }
