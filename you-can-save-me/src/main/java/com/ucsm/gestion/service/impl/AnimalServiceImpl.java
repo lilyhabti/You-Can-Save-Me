@@ -47,7 +47,7 @@ public class AnimalServiceImpl implements AnimalService {
 		existingAnimal.setPrenom(animal.getPrenom());
 		existingAnimal.setGenre(animal.getGenre());
 		existingAnimal.setDescription(animal.getDescription());
-		existingAnimal.setDate_naissance(animal.getDate_naissance());
+//		existingAnimal.setDate_naissance(animal.getDate_naissance());
 		existingAnimal.setAge(animal.getAge());
 		existingAnimal.setDate_entre(animal.getDate_entre());
 		existingAnimal.setVaccin(animal.isVaccin());

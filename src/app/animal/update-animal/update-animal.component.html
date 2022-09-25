@@ -1,0 +1,46 @@
+<div class="center">
+    <form (ngSubmit) = "onSubmit()">
+        <h2>Update Animal</h2>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "animal.prenom" name="prenom" id="prenom" required>
+             <label>Nickname:</label>
+        </div>
+        <div class="txt_field">
+             <!-- <select name="genre" id="genre">
+                <option [(ngModel)] = "animal.genre" value="Female">Female</option>
+                <option [(ngModel)] = "animal.genre" value="Male">Male</option>
+            </select> -->
+            <input type="text" [(ngModel)] = "animal.genre" name="genre" id="genre" required>
+             <label>Gender:</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "animal.description" name="description" id="description" required>
+             <label>Description:</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "animal.age" name="age" id="age" required>
+             <label>Age:</label>
+        </div>
+        <div class="txt_field">
+            <input type="Date" [(ngModel)] = "animal.date_entre" name="date_entre" id="date_entre" required>
+             <label>Coming Date:</label>
+        </div>
+        <div class="txt_field">
+            <!-- <select name="vaccin" id="vaccin">
+                <option [(ngModel)] = "animal.vaccin" value="true">True</option>
+                <option [(ngModel)] = "animal.vaccin" value="false">False</option>
+            </select> -->
+            <input type="text" [(ngModel)] = "animal.vaccin" name="vaccin" id="vaccin" required>
+             <label>Vaccinated:</label>
+        </div>
+        <div class="txt_field">
+            <!-- <select name="sterilise" id="sterilise">
+                <option [(ngModel)] = "animal.sterilise" value="true">True</option>
+                <option [(ngModel)] = "animal.sterilise" value="false">False</option>
+            </select> -->
+            <input type="text" [(ngModel)] = "animal.sterilise" name="sterilise" id="sterilise" required>
+             <label>Sterilised:</label>
+        </div>
+        <input type="submit" value="Save">
+    </form>
+</div>

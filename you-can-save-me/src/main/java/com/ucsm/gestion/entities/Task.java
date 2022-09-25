@@ -1,10 +1,9 @@
 package com.ucsm.gestion.entities;
 
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -17,6 +16,9 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -43,9 +45,10 @@ public class Task {
 	private Date date_fin;
 	private String statut;
 	
-	@ManyToMany(mappedBy = "tasks")
-	private Set<Animal> posts = new HashSet<>();
+	@JsonIgnore
+	@ManyToMany(mappedBy = "tasks",fetch = FetchType.LAZY)
+	private Collection<Animal> animals = new ArrayList<>();
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
     private Membre membre;
 }

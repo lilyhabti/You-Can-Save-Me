@@ -1,0 +1,30 @@
+<div class="center">
+    <form (ngSubmit) = "onSubmit()">
+        <h2>Update Task</h2>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "task.titre" name="titre" id="titre" required>
+             <label>Title:</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "task.descriptif" name="descriptif" id="descriptif" required>
+             <label>Description:</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "task.type" name="type" id="type" required>
+             <label>Type:</label>
+        </div>
+        <div class="txt_field">
+            <input type="date" [(ngModel)] = "task.date_debut" name="date_debut" id="date_debut" required>
+             <label>Start Date:</label>
+        </div>
+        <div class="txt_field">
+            <input type="date" [(ngModel)] = "task.date_fin" name="date_fin" id="date_fin" required>
+             <label>Deadline:</label>
+        </div>
+        <div class="txt_field">
+            <input type="text" [(ngModel)] = "task.statut" name="statut" id="statut" required>
+             <label>Status:</label>
+        </div>
+        <input type="submit" value="Save">
+    </form>
+</div>

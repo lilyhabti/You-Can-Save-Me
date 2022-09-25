@@ -1,0 +1,39 @@
+<!-- <h3> View Animal Details</h3> -->
+<div class="bottom">
+    <h3>{{task.titre}} </h3>
+    <!-- <p>
+      A membre of You Can Save Me association!
+    </p> -->
+  
+    <div class="advants">
+      <table>
+        <tr>
+          <td><i class="bi bi-sticky-fill" style="font-size: 20px"></i></td>
+          <td style="padding: 15px;">{{task.descriptif}}</td>
+        </tr>
+        <tr>
+          <td><i class="bi bi-fonts" style="font-size: 20px"></i></td>
+          <td style="padding: 15px;">{{task.type}}</td>
+        </tr>
+        <tr>
+          <td><i class="bi bi-calendar-check-fill" style="font-size: 20px"></i></td>
+          <td style="padding: 15px;">{{task.date_debut}}</td>
+        </tr>
+        <tr>
+            <td><i class="bi bi-calendar-check-fill" style="font-size: 20px"></i></td>
+            <td style="padding: 15px;">{{task.date_fin}}</td>
+          </tr>
+        <tr>
+          <td >
+              <i *ngIf="task.statut=='To Do'" class="bi bi-circle " style="font-size: 20px"></i>
+              <i *ngIf="task.statut=='Doing'" class="bi bi-circle-half " style="font-size: 20px"></i>
+              <i *ngIf="task.statut=='Done'" class="bi bi-circle-fill " style="font-size: 20px"></i>
+              
+          </td>
+          <td style="padding: 10px;" *ngIf="task.statut=='To Do'">{{task.titre}}  is not started yet.</td>
+          <td style="padding: 10px;" *ngIf="task.statut=='Doing'">{{task.titre}} {{task.titre}} is not done yet.</td>
+          <td style="padding: 10px;" *ngIf="task.statut=='Done'">{{task.titre}}  is done.</td>
+        </tr>
+      </table>
+    </div>
+    

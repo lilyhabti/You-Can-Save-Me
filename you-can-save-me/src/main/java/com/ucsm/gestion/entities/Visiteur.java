@@ -27,14 +27,14 @@ public class Visiteur extends AppUser {
 	@JsonFormat(pattern="yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
 	private Date date_naissance;
-	private String genre;
+//	private String genre;
 	private String centre_interet;
 	
 	public Visiteur(Long id_user, String nom, String prenom, String username, String password, String email,
-			String telephone, Collection<AppRole> appRoles, Date date_naissance, String genre, String centre_interet) {
+			String telephone, Collection<AppRole> appRoles, Date date_naissance, String centre_interet) {
 		super(id_user, nom, prenom, username, password, email, telephone, appRoles);
 		this.date_naissance = date_naissance;
-		this.genre = genre;
+//		this.genre = genre;
 		this.centre_interet = centre_interet;
 	}
 }

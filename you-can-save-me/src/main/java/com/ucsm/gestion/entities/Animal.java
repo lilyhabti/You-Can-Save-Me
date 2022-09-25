@@ -1,9 +1,8 @@
 package com.ucsm.gestion.entities;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -35,9 +34,9 @@ public class Animal {
 	private String prenom;
 	private String genre;
 	private String description;
-	@JsonFormat(pattern="yyyy-MM-dd")
-	@Temporal(TemporalType.DATE)
-	private Date date_naissance;
+//	@JsonFormat(pattern="yyyy-MM-dd")
+//	@Temporal(TemporalType.DATE)
+//	private Date date_naissance;
 	private int age;
 	@JsonFormat(pattern="yyyy-MM-dd")
 	@Temporal(TemporalType.DATE)
@@ -47,5 +46,5 @@ public class Animal {
 	
 	@ManyToMany(cascade = {CascadeType.ALL})
 	@JoinTable(name = "animal_task",joinColumns = @JoinColumn(name = "id_animal"),inverseJoinColumns = @JoinColumn(name = "id_task"))
-    private Set<Task> tasks = new HashSet<>();
+    private Collection<Task> tasks = new ArrayList<>();
 }

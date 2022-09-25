@@ -1,44 +1,46 @@
 
 <div class="container" >
-    <div class="box" *ngFor = "let membre of membres">
-      <div class="top">
-        <img src="../../assets/img/logo.jpeg" alt="" />
-        <!-- <span
-          ><i class="fas fa-heart"></i><i class="fas fa-exchange-alt"></i
-        ></span> -->
-      </div>
-      <div class="bottom">
-        <h3>{{membre.prenom}} {{membre.nom}}</h3>
-        <p>
-          A membre of You Can Save Me association!
-        </p>
-
-        <div class="advants">
-          <table>
-            <tr>
-              <td><i class="bi bi-person-check" style="font-size: 20px"></i></td>
-              <td style="padding: 15px;">{{membre.username}}</td>
-            </tr>
-            <tr>
-              <td><i class="bi bi-envelope-fill" style="font-size: 20px"></i></td>
-              <td style="padding: 15px;">{{membre.email}}</td>
-            </tr>
-            <tr>
-              <td><i class="bi bi-phone-fill" style="font-size: 20px"></i></td>
-              <td style="padding: 15px;">{{membre.telephone}}</td>
-            </tr>
-          </table>
-        </div>
-        
-        <div class="boutton">
-          <table>
-            <tr>
-              <td><button type="button" class="btn btn-info"><i class="bi bi-info-circle"></i></button></td>
-              <td><button type="button" class="btn btn-secondary"><i class="bi bi-pencil-square"></i></button></td>
-              <td> <button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
-            </tr>
-          </table>
+    <div class="row">
+        <div class="box" *ngFor = "let membre of membres">
+          <div class="top">
+            <img src="../../assets/img/logo.jpeg" alt="" />
+            <!-- <span
+              ><i class="fas fa-heart"></i><i class="fas fa-exchange-alt"></i
+            ></span> -->
+          </div>
+          <div class="bottom">
+            <h3>{{membre.prenom}} {{membre.nom}}</h3>
+            <p>
+              A membre of You Can Save Me association!
+            </p>
+    
+            <div class="advants">
+              <table>
+                <tr>
+                  <td><i class="bi bi-person-check" style="font-size: 20px"></i></td>
+                  <td style="padding: 15px;">{{membre.username}}</td>
+                </tr>
+                <tr>
+                  <td><i class="bi bi-envelope-fill" style="font-size: 20px"></i></td>
+                  <td style="padding: 15px;">{{membre.email}}</td>
+                </tr>
+                <tr>
+                  <td><i class="bi bi-phone-fill" style="font-size: 20px"></i></td>
+                  <td style="padding: 15px;">{{membre.telephone}}</td>
+                </tr>
+              </table>
+            </div>
+            
+            <div class="boutton">
+              <table>
+                <tr>
+                  <td><button type="button" (click) = "memberDetails(membre.id_user)" class="btn btn-info"><i class="bi bi-info-circle"></i></button></td>
+                  <td><button type="button" (click) = "updateMembre(membre.id_user)"  class="btn btn-secondary"><i class="bi bi-pencil-square"></i></button></td>
+                  <td> <button (click) = "deleteMember(membre.id_user)"  class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+                </tr>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>

@@ -50,7 +50,7 @@ public class TaskServiceImpl implements TaskService {
 		existingTask.setDate_debut(task.getDate_debut());
 		existingTask.setDate_fin(task.getDate_fin());
 		existingTask.setStatut(task.getStatut());
-		existingTask.setPosts(task.getPosts());
+		existingTask.setAnimals(task.getAnimals());
 		existingTask.setMembre(task.getMembre());
 		
 		return taskRepository.save(existingTask);

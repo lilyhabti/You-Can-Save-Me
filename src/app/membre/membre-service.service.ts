@@ -26,7 +26,10 @@ export class MembreServiceService {
     return this.httpClient.get<Membre>(`${this.baseURL}/${id_user}`);
   }
 
-  updateEmployee(id_user: number, membre: Membre): Observable<Object>{
+  updateMember(id_user: number, membre: Membre): Observable<Object>{
     return this.httpClient.put(`${this.baseURL}/${id_user}`, membre);
+  }
+  deleteMember(id_user: number): Observable<Object>{
+    return this.httpClient.delete(`${this.baseURL}/${id_user}`);
   }
 }

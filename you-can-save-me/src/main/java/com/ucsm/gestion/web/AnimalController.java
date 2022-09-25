@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ import com.ucsm.gestion.entities.Animal;
 import com.ucsm.gestion.service.AnimalService;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 public class AnimalController {
 	
 	private AnimalService animalService;
@@ -52,7 +54,8 @@ public class AnimalController {
 	
 	@DeleteMapping(path="/animals/{id_animal}")
 //	@PostAuthorize("hasAuthority('ADMIN')")
-	public ResponseEntity<String> delete(@PathVariable("id") long id){
+	public ResponseEntity<String> delete(@PathVariable("id_animal") long id){
+		
 		animalService.delete(id);
 			
 		return new ResponseEntity<String>("Animal deleted successfully!.", HttpStatus.OK);

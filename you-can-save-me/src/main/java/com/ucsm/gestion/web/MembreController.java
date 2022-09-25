@@ -54,7 +54,7 @@ public class MembreController {
 	
 	@DeleteMapping(path="/membres/{id_user}")
 //	@PostAuthorize("hasAuthority('ADMIN')")
-	public ResponseEntity<String> delete(@PathVariable("id") long id){
+	public ResponseEntity<String> delete(@PathVariable("id_user") long id){
 		membreService.delete(id);
 			
 		return new ResponseEntity<String>("Membre deleted successfully!.", HttpStatus.OK);

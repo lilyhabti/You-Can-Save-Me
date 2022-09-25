@@ -1,0 +1,45 @@
+<!-- <h3> View Animal Details</h3> -->
+<div class="bottom">
+    <h3>{{member.prenom}} {{member.nom}} </h3>
+    <!-- <p>
+      A membre of You Can Save Me association!
+    </p> -->
+  
+    <div class="advants">
+      <table>
+        <tr>
+          <td><i class="bi bi-person-check" style="font-size: 20px"></i></td>
+          <td style="padding: 15px;">{{member.username}}</td>
+        </tr>
+        <tr>
+          <td><i class="bi bi-envelope-fill" style="font-size: 20px"></i></td>
+          <td style="padding: 15px;">{{member.email}}</td>
+        </tr>
+        <tr>
+          <td><i class="bi bi-phone-fill" style="font-size: 20px"></i></td>
+          <td style="padding: 15px;">{{member.telephone}}</td>
+        </tr>
+        <tr>
+          <td >
+              <i *ngIf="member.active==true" class="bi bi-check2-circle " style="font-size: 20px"></i>
+              <i *ngIf="member.active==false" class="bi bi-file-x " style="font-size: 20px"></i>
+              
+          </td>
+          <td style="padding: 10px;" *ngIf="member.active==true">{{member.prenom}} {{member.nom}} is active.</td>
+          <td style="padding: 10px;" *ngIf="member.active==false">{{member.prenom}} {{member.nom}} is not active.</td>
+        </tr>
+        <tr>
+          <td><i class="bi bi-calendar-heart" style="font-size: 20px"></i></td>
+          <td style="padding: 10px;">{{member.date_entre}}</td>
+        </tr>
+        <tr>
+          <td><i class="bi bi-hourglass-split" style="font-size: 20px"></i></td>
+          <td style="padding: 10px;">{{member.age}} ans.</td>
+        </tr>
+        <tr>
+          <td><i class="bi bi-person-workspace" style="font-size: 20px"></i></td>
+          <td style="padding: 10px;">{{member.profession}}.</td>
+        </tr>
+      </table>
+    </div>
+    

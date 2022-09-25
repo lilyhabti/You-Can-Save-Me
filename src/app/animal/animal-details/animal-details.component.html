@@ -1,0 +1,48 @@
+<!-- <h3> View Animal Details</h3> -->
+<div class="bottom">
+  <h3>{{animal.prenom}} </h3>
+  <!-- <p>
+    A membre of You Can Save Me association!
+  </p> -->
+
+  <div class="advants">
+    <table>
+      <tr>
+        <td>
+          <i *ngIf="animal.genre=='Female'" class="bi bi-gender-female" style="font-size: 20px"></i>
+          <i *ngIf="animal.genre=='Male'" class="bi bi-gender-male" style="font-size: 20px"></i>
+      </td>
+        <td style="padding: 10px;">{{animal.genre}}</td>
+      </tr>
+      <tr>
+        <td><i class="bi bi-activity" style="font-size: 20px"></i></td>
+        <td style="padding: 10px;">{{animal.age}} months.</td>
+      </tr>
+      <tr>
+        <td><i class="bi bi-bookmark-heart-fill" style="font-size: 20px"></i></td>
+        <td style="padding: 10px;">{{animal.description}}.</td>
+      </tr>
+      <tr>
+        <td><i class="bi bi-calendar-heart" style="font-size: 20px"></i></td>
+        <td style="padding: 10px;">{{animal.date_entre}} </td>
+      </tr>
+      <tr>
+          <td >
+              <i *ngIf="animal.vaccin==true" class="bi bi-heart-fill text-success" style="font-size: 20px"></i>
+              <i *ngIf="animal.vaccin==false" class="bi bi-heart-fill text-danger" style="font-size: 20px"></i>
+              
+          </td>
+          <td style="padding: 10px;" *ngIf="animal.vaccin==true">Vaccinated.</td>
+          <td style="padding: 10px;" *ngIf="animal.vaccin==false">Not vaccinated.</td>
+     </tr>
+     <tr>
+          <td>
+              <i *ngIf="animal.sterilise==true" class="bi bi-suit-club-fill text-success" style="font-size: 20px;"></i>
+              <i *ngIf="animal.sterilise==false" class="bi bi-suit-club-fill text-danger" style="font-size: 20px;"></i>
+          </td>
+          <td style="padding: 10px;" *ngIf="animal.sterilise==true">Sterilised.</td>
+          <td style="padding: 10px;" *ngIf="animal.sterilise==false">Not sterilised.</td>
+     </tr>
+    </table>
+  </div>
+  
